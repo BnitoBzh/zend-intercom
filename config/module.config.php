@@ -12,9 +12,4 @@ return array(
 			'ZendIntercom\Service\IntercomService' => 'ZendIntercom\Factory\IntercomServiceFactory',
 		)
 	),
-	'controller_plugins' => array(
-		'factories' => array(
-			'intercom' => 'ZendIntercom\Factory\ZendIntercomControllerPluginFactory',
-		),
-	),
 );

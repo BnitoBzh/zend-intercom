@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "intercom/intercom-php": "dev-master"
+        "intercom/intercom-php": "1.0.0-b12"
     },
     "autoload": {
         "psr-0": {

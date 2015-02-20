@@ -1,0 +1,26 @@
+{
+    "name": "bnitobzh/zend-intercom",
+    "description": "A Zend Framework 2 module that lets you to use the Intercom service.",
+    "keywords": ["zf2", "intercom", "zend", "intercom.io", "zend-framework"],
+    "homepage": "https://github.com/bnitobzh/zend-intercom",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "New BSD License",
+    "authors": [
+        {
+            "name": "BnitoBzh"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "intercom/intercom-php": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZendIntercom": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}

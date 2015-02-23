@@ -10,23 +10,16 @@
  */
 namespace ZendIntercom\Factory;
 
-use Intercom\IntercomBasicAuthClient;
-
+use ZendIntercom\Controller\Plugin\Intercom as IntercomControllerPlugin;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
-class IntercomServiceFactory implements FactoryInterface
+class IntercomControllerPluginFactory implements FactoryInterface
 {
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $config = $serviceLocator->get('config');
-        $config = $config['zend-intercom'];
-        
-        $intercom = IntercomBasicAuthClient::factory(array(
-    		'app_id' => $config['app_id'],
-    		'api_key' => $config['api_key']
-		));
-		
-        return $intercom;
+        $service = $serviceLocator->getServiceLocator()->get('ZendIntercom\Service\IntercomService');
+
+        return new IntercomControllerPlugin($service);
     }
 }

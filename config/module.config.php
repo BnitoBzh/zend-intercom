@@ -9,7 +9,12 @@ return array(
         	'intercom'  => 'ZendIntercom\Service\IntercomService',
 		),
 		'factories' => array(
-			'ZendIntercom\Service\IntercomService' => 'ZendIntercom\Factory\IntercomServiceFactory',
+			'ZendIntercom\Service\IntercomService' => 'ZendIntercom\Factory\IntercomServiceFactory'
 		)
 	),
+    'controller_plugins' => array(
+        'factories' => array(
+            'intercom' => 'ZendIntercom\Factory\IntercomControllerPluginFactory',
+        ),
+    ),
 );

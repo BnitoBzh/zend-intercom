@@ -4,7 +4,7 @@
     "keywords": ["zf2", "intercom", "zend", "intercom.io", "zend-framework"],
     "homepage": "https://github.com/bnitobzh/zend-intercom",
     "type": "library",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "license": "New BSD License",
     "authors": [
         {

@@ -14,7 +14,7 @@
     "require": {
         "php": ">=5.4.0",
         "intercom/intercom-php": "1.0.0-b12",
-        "zf-commons/zfc-user": ">=0.*"
+        "zf-commons/zfc-user": ">=0.1"
     },
     "autoload": {
         "psr-0": {

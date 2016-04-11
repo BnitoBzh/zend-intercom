@@ -33,7 +33,18 @@ class Module
         $this->config = $this->serviceManager->get('Config');
     
         if ($this->config['zend-intercom']['enable-javascript-integration']) {
-            $this->setupJavascriptLogging($event);
+            $excludedRoutes = $this->config['zend-intercom']['excluded-routes'];
+            if (count($excludedRoutes)) {
+                $event->getApplication()->getEventManager()->attach(MvcEvent::EVENT_DISPATCH,
+                    function($e) use ($excludedRoutes, $event) {
+                        if(!in_array($e->getRouteMatch()->getMatchedRouteName(), $excludedRoutes)) {
+                            $this->setupJavascriptLogging($event);
+                        }
+                    }
+                );
+            } else {
+                $this->setupJavascriptLogging($event);
+            }
         }
     }
     

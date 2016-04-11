@@ -6,15 +6,25 @@
  * drop this config file in it, remove the .dist extension add your configuration details.
  */
 $settings = array(
+
     /**
      * Your Sentry API key
      */
     'app_id' => 'YOUR_APP_ID',
     'api_key' => 'YOUR_API_KEY',
+    
     /**
      * Enable Intercom Javascript Integration
      */
     'enable-javascript-integration' => true
+    
+    /**
+     * Excluded routes for javascript integration
+     */
+    'excluded-routes' => [
+    	'home',
+    	// ...
+    ]
 );
 
 /**

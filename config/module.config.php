@@ -2,7 +2,9 @@
 return array(
 	'zend-intercom' => array(
 		'app_id' => null,
-		'api_key' => null
+		'api_key' => null,
+        'enable-javascript-integration' => false,
+        'excluded-routes' => []
 	),
 	'service_manager' => array(
 		'aliases' => array(

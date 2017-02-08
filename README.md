@@ -8,7 +8,7 @@ In your project's `composer.json` use:
 
     {   
         "require": {
-            "bnitobzh/zend-sentry": "dev-master"
+            "bnitobzh/zend-intercom": "dev-master"
     }
     
 Run `php composer.phar update` to download it into your vendor folder and setup autoloading.
